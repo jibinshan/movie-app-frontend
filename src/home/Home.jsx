@@ -21,8 +21,8 @@ function Home({setSelectedgenre}) {
     const [movie,setMovie] = useState([])
     const [currentpage,setCurrentpage] = useState(1)
     const [totalPages,setTotalpages] = useState(1)
-    const userapi = `http://localhost:2010/user/watchlater/${localStorage?.userid}`
-    const api = "http://localhost:2010/movie/pagination"
+    const userapi = `https://movieapp-backend-pdqb.onrender.com/user/watchlater/${localStorage?.userid}`
+    const api = "https://movieapp-backend-pdqb.onrender.com/movie/pagination"
     const fetchdata = async()=>{
        try {
         const response = await axios(api,{
@@ -74,7 +74,7 @@ function Home({setSelectedgenre}) {
     }
     const handledeletemovie = async(movieid,title)=>{
        try {
-        const response = await axios(`http://localhost:2010/movie/delete/${movieid}`,{
+        const response = await axios(`https://movieapp-backend-pdqb.onrender.com/movie/delete/${movieid}`,{
           method:"DELETE"
         })
         setMovie(response.data.data)

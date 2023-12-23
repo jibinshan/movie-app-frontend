@@ -13,7 +13,7 @@ function Genre() {
   const [addgenre,setAddgenre] = useState("")
   const [genreid,setGenreid] = useState(null)
   const [error,seterror] = useState("")
-  const api = "http://localhost:2010/genre"
+  const api = "https://movieapp-backend-pdqb.onrender.com/genre"
   useEffect(()=>{
     dispatch(fetchgenre())
   },[])

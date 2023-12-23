@@ -9,7 +9,7 @@ import axios from 'axios'
 function Watchlater() {
     let userid = localStorage.userid
     const [later,setLater] = useState([])
-    const api = `http://localhost:2010/user/watchlater/${userid}`
+    const api = `https://movieapp-backend-pdqb.onrender.com/user/watchlater/${userid}`
     const fetchdata = async()=>{
       const response = await axios(api)
       setLater(response.data.movie);
